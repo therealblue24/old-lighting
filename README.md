@@ -8,6 +8,8 @@ Cool lighting :)
 
 > hahahaha funny joke
 
+**NOTE: Only tested on 1.21.6!**
+
 ## Assemble the pack yourself
 
 ```sh
