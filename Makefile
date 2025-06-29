@@ -8,7 +8,7 @@ SRCS = pack.mcmeta pack.png assets
 OUT = oldlight.zip
 
 clean:
-	rm -rf $(OUT)
+	rm -f $(OUT)
 
 assemble:
 	rm -f $(OUT)
