@@ -23,11 +23,11 @@ float get_brightness(float level) {
     return mix(curved_level, 1.0, lightmapInfo.AmbientLightFactor);
 }
 
+/* Credit to https://stackoverflow.com/questions/596216/formula-to-determine-perceived-brightness-of-rgb-color for giving a formula for this impl */
+
 float cbrt(float x) {
     return pow(x, (1.0 / 3.0));
 }
-
-/* Credit to https://stackoverflow.com/questions/596216/formula-to-determine-perceived-brightness-of-rgb-color for giving a formula for this impl */
 
 float srgb2lin_1c(float inp) {
     if(inp <= 0.04045) {
@@ -52,10 +52,10 @@ float true_lum_from_lum(float y) {
 } 
 
 float luma(vec3 inp) {
-    vec3 lin = srgb2lin(inp);
-    float y = lum_from_lin(lin);
-    float lum = true_lum_from_lum(y);
-    return (lum / 100.0);
+    vec3 lin = srgb2lin(inp); /* get linear color from sRGB */
+    float y = lum_from_lin(lin); /* get "luminance" */
+    float lum = true_lum_from_lum(y); /* get the true luminance */
+    return (lum / 100.0); /* conv luminance value to [0, 1] */
 }
 
 
