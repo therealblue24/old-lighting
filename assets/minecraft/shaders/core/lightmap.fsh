@@ -41,12 +41,12 @@ vec3 srgb2lin(vec3 inp) {
 }
 
 float lum_from_lin(vec3 inp) {
-    return (inp.r * 0.2126) + (inp.g * 0.7152) + (inp.b * 0.0722);
+    return dot(inp, vec3(0.2126, 0.7152, 0.0722));
 }
 
 float true_lum_from_lum(float y) {
-    if(y <= 0.008856) {
-        return 903.3 * y;
+    if(y <= (216.0 / 24389.0)) {
+        return (24389.0 / 27.0) * y;
     }
     return (116 * cbrt(y)) - 16;
 } 
@@ -57,7 +57,6 @@ float luma(vec3 inp) {
     float lum = true_lum_from_lum(y); /* get the true luminance */
     return (lum / 100.0); /* conv luminance value to [0, 1] */
 }
-
 
 vec3 notGamma(vec3 x) {
     vec3 nx = 1.0 - x;
