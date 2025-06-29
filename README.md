@@ -13,5 +13,5 @@ Cool lighting :)
 ## Assemble the pack yourself
 
 ```sh
-$ ./build.sh
+$ make assemble
 ```
