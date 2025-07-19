@@ -14,6 +14,8 @@ Should work on versions:
 - 1.21.7
 - 1.21.8
 
+**Best expierenced with Moody brightness!**
+
 ## Assemble the pack yourself
 
 ```sh
