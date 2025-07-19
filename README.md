@@ -8,7 +8,11 @@ Cool lighting :)
 
 > hahahaha funny joke
 
-**NOTE: Only tested on 1.21.6!**
+Should work on versions:
+
+- 1.21.6
+- 1.21.7
+- 1.21.8
 
 ## Assemble the pack yourself
 
